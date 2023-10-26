@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import css from './form.css';
+// import css from './form.css';
 import { nanoid } from 'nanoid';
 
 export class Form extends Component {
@@ -37,34 +37,23 @@ export class Form extends Component {
     const { name, number } = this.state;
     return (
       <>
-        <form className={css.form} onSubmit={this.handleSubmit}>
-          <label className={css.label} htmlFor={this.nameId}>
-            Name
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={this.handleChange}
-              pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-              title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-              required
-              placeholder="name"
-            ></input>
-          </label>
-          <label className={css.label} htmlFor={this.numberId}>
-            Number
-            <input
-              type="tel"
-              name="number"
-              value={number}
-              onChange={this.handleChange}
-              pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-              title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-              required
-              placeholder="number"
-            />
-          </label>
-
+        <form onSubmit={this.handleSubmit}>
+          <label htmlFor={this.nameId}>Name</label>
+          <input
+            type="text"
+            id={this.nameId}
+            name="name"
+            value={name}
+            onChange={this.handleChange}
+          />
+          <label htmlFor={this.numberId}>Number</label>
+          <input
+            type="text"
+            id={this.numberId}
+            name="number"
+            value={number}
+            onChange={this.handleChange}
+          />
           <button type="submit">Add contact</button>
         </form>
       </>
@@ -72,8 +61,9 @@ export class Form extends Component {
   }
 }
 
-Form.propTypes = {
-  name: PropTypes.string,
-  number: PropTypes.string,
-  onSubmit: PropTypes.func.isRequired,
-};
+   Form.propTypes = {
+     name: PropTypes.string,
+     number: PropTypes.string,
+     onSubmit: PropTypes.func.isRequired,
+   };
+  

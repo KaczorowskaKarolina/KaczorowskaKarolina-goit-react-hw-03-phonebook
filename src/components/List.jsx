@@ -7,25 +7,22 @@ const List = ({ contacts, filter, deleteContact }) => {
     return contact.name && contact.name.toLowerCase().includes(filter && filter.toLowerCase());
   });
 
-  console.log(filter); // Sprawdzenie, czy prop filter jest przekazywany i ma poprawną wartość
-  console.log(deleteContact); // Sprawdzenie, czy prop deleteContact jest przekazywany i ma poprawną wartość
-  
   return (
-    <div>
-      {filteredContacts.map((contact) => (
-        <div key={contact.id}>
-          {contact.name}: {contact.number}
-          <button onClick={() => deleteContact(contact.id)}>Delete contact</button>
-        </div>
-      ))}
-    </div>
-  );
+  <ul>
+    {filteredContacts.map((contact) =>
+      <li key={contact.id}>
+        {contact.name}: {contact.number}
+        <button onClick={() => deleteContact(contact.id)}>Delete contact</button>
+      </li>
+    )}
+  </ul>
+);
 };
 
 List.propTypes = {
-  contacts: PropTypes.arrayOf(PropTypes.object).isRequired,
-  filter: PropTypes.string.isRequired,
-  deleteContact: PropTypes.func.isRequired,
+  contacts: PropTypes.arrayOf(PropTypes.object),
+  filter: PropTypes.string,
+  deleteContact: PropTypes.func,
 };
 
 export default List;
