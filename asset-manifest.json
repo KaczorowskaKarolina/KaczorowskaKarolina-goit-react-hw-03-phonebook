@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/KaczorowskaKarolina-goit-react-hw-03-phonebook/static/css/main.7a64a02f.css",
-    "main.js": "/KaczorowskaKarolina-goit-react-hw-03-phonebook/static/js/main.9acd797b.js",
+    "main.css": "/KaczorowskaKarolina-goit-react-hw-03-phonebook/static/css/main.5fb2ce95.css",
+    "main.js": "/KaczorowskaKarolina-goit-react-hw-03-phonebook/static/js/main.85fef27e.js",
     "index.html": "/KaczorowskaKarolina-goit-react-hw-03-phonebook/index.html",
-    "main.7a64a02f.css.map": "/KaczorowskaKarolina-goit-react-hw-03-phonebook/static/css/main.7a64a02f.css.map",
-    "main.9acd797b.js.map": "/KaczorowskaKarolina-goit-react-hw-03-phonebook/static/js/main.9acd797b.js.map"
+    "main.5fb2ce95.css.map": "/KaczorowskaKarolina-goit-react-hw-03-phonebook/static/css/main.5fb2ce95.css.map",
+    "main.85fef27e.js.map": "/KaczorowskaKarolina-goit-react-hw-03-phonebook/static/js/main.85fef27e.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a64a02f.css",
-    "static/js/main.9acd797b.js"
+    "static/css/main.5fb2ce95.css",
+    "static/js/main.85fef27e.js"
   ]
 }
