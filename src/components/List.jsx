@@ -4,23 +4,21 @@ import './list.css';
 
 const List = ({ contacts, filter, deleteContact }) => {
   const filteredContacts = contacts.filter((contact) => {
-    return contact.name.toLowerCase().includes(filter.toLowerCase());
+    return contact.name && contact.name.toLowerCase().includes(filter && filter.toLowerCase());
   });
 
+  console.log(filter); // Sprawdzenie, czy prop filter jest przekazywany i ma poprawną wartość
+  console.log(deleteContact); // Sprawdzenie, czy prop deleteContact jest przekazywany i ma poprawną wartość
+  
   return (
-    <ul className="list">
+    <div>
       {filteredContacts.map((contact) => (
-        <li key={contact.id} className="list-item">
+        <div key={contact.id}>
           {contact.name}: {contact.number}
-          <button
-            className="list-item__delete-button"
-            onClick={() => deleteContact(contact.id)}
-          >
-            Delete contact
-          </button>
-        </li>
+          <button onClick={() => deleteContact(contact.id)}>Delete contact</button>
+        </div>
       ))}
-    </ul>
+    </div>
   );
 };
 

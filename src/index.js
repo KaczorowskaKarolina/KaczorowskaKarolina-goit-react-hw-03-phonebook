@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { nanoid } from 'nanoid';
 import { App } from './components/App';
 import './index.css';
@@ -91,4 +91,8 @@ class PhonebookApp extends React.Component {
   }
 }
 
-ReactDOM.render(<PhonebookApp />, document.getElementById('root'));
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <PhonebookApp />
+  </React.StrictMode>
+);

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Form } from './Form';
 import { Filter } from './Filter';
-import { List } from './List';
+import List from './List';
 import { nanoid } from 'nanoid';
 
 // import css from './app.css';
