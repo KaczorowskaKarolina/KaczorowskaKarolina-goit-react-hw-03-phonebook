@@ -4,7 +4,8 @@ import { Filter } from './Filter';
 import { List } from './List';
 import { nanoid } from 'nanoid';
 
-import css from './app.css';
+// import css from './app.css';
+
 export class App extends Component {
   state = {
     contacts: [
@@ -47,7 +48,6 @@ export class App extends Component {
   };
 
   onFilterChange = event => {
-    event.preventDefault();
     this.setState({ filter: event.target.value.toLowerCase() });
   };
 
@@ -61,7 +61,7 @@ export class App extends Component {
     const filter = this.state.filter;
 
     return (
-      <div className={css.container}>
+      <div>
         <h1>Phonebook</h1>
         <Form onSubmit={this.addContactOnSubmit} />
         <h2>Contacts</h2>
