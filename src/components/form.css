@@ -2,16 +2,33 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    border: 1.5px solid black;
-    border-radius: 3px;
+
+
+    border: 1.5px solid rgb(172, 247, 81);
+    border-radius: 5px;
     padding: 10px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    background-color: rgb(95, 202, 219);
+    align-items: center;
+    
+    justify-content: center;
+    
+
+
+    background-color: rgb(200, 245, 160);
 }
 
-.label {
+.form label {
     display: flex;
     flex-direction: column;
     gap: 7px;
+    align-items: flex-start;
+}
+
+.form input {
+    display: flex;
+    flex-direction: column;
+}
+
+h1,
+h2, p {
+    text-align: center;
 }

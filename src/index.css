@@ -14,3 +14,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  
+
+  background-color: rgb(236, 200, 102);
+  border: 1px solid rgb(238, 141, 22);
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 5px rgba(239, 126, 20, 0.8);
+
+  max-width: 400px;
+
+  position: absolute;
+  
+  
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

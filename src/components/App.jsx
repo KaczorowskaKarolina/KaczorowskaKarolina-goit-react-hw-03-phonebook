@@ -79,7 +79,8 @@ class App extends Component {
   render() {
   const filter = this.state.filter;
 
-  return (
+    return (
+    <div className="container">
     <div className="phonebook-app">
       <h1>Phonebook</h1>
       <Form onSubmit={this.addContactOnSubmit} />
@@ -90,7 +91,8 @@ class App extends Component {
         filter={filter}
         deleteContact={this.deleteContact}
       />
-    </div>
+        </div>
+        </div>
   );
 }
 }

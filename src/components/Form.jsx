@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// import css from './form.css';
+import './form.css'; 
 import { nanoid } from 'nanoid';
 
 export class Form extends Component {
@@ -27,7 +27,6 @@ export class Form extends Component {
 
   handleChange = event => {
     const { name, value } = event.target;
-    console.log(value);
     this.setState({
       [name]: value,
     });
@@ -36,9 +35,9 @@ export class Form extends Component {
   render() {
     const { name, number } = this.state;
     return (
-      <>
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor={this.nameId}>Name</label>
+      <form className="form" onSubmit={this.handleSubmit}>
+        <label htmlFor={this.nameId}>
+          Name
           <input
             type="text"
             id={this.nameId}
@@ -46,7 +45,9 @@ export class Form extends Component {
             value={name}
             onChange={this.handleChange}
           />
-          <label htmlFor={this.numberId}>Number</label>
+        </label>
+        <label htmlFor={this.numberId}>
+          Number
           <input
             type="text"
             id={this.numberId}
@@ -54,16 +55,15 @@ export class Form extends Component {
             value={number}
             onChange={this.handleChange}
           />
-          <button type="submit">Add contact</button>
-        </form>
-      </>
+        </label>
+        <button type="submit">Add contact</button>
+      </form>
     );
   }
 }
 
-   Form.propTypes = {
-     name: PropTypes.string,
-     number: PropTypes.string,
-     onSubmit: PropTypes.func.isRequired,
-   };
-  
+Form.propTypes = {
+  name: PropTypes.string,
+  number: PropTypes.string,
+  onSubmit: PropTypes.func.isRequired,
+};
